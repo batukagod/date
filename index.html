@@ -1,0 +1,94 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+<meta charset="UTF-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\
+<title>A Little Surprise \uc0\u55357 \u56470 </title>\
+<link rel="stylesheet" href="style.css">\
+\
+<!-- Confetti Library -->\
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>\
+</head>\
+\
+<body>\
+\
+<audio id="bgMusic" loop>\
+  <source src="music.mp3" type="audio/mp3">\
+</audio>\
+\
+<!-- \uc0\u55356 \u57144  CHERRY BLOSSOMS -->\
+<canvas id="sakura"></canvas>\
+\
+<!-- INTRO -->\
+<div class="screen active" id="intro">\
+  <h1>\uc0\u55356 \u57144  A little surprise for Nandia...</h1>\
+  <button onclick="start()">Tap to begin \uc0\u55357 \u56470 </button>\
+  <button onclick="toggleMusic()">\uc0\u55356 \u57269  Music</button>\
+</div>\
+\
+<!-- LETTER -->\
+<div class="screen" id="letter">\
+  <div class="envelope" onclick="openLetter()">\uc0\u55357 \u56460  Click the envelope</div>\
+\
+  <div id="letterText" class="hidden">\
+    <h2>Dear Nandia,</h2>\
+    <p>\
+      I've been thinking about asking you this for a while...<br><br>\
+      Every time we talk, you make my day brighter.<br><br>\
+      So I wanted to ask you something \uc0\u55357 \u56470 \
+    </p>\
+    <button onclick="goQuestion()">Continue \uc0\u10140 </button>\
+  </div>\
+</div>\
+\
+<!-- QUESTION -->\
+<div class="screen" id="question">\
+  <h1>Will you go on a date with me? \uc0\u55358 \u56698 \u55357 \u56393 \u55357 \u56392 </h1>\
+\
+  <div class="btns">\
+    <button id="yesBtn" onclick="yes()">\uc0\u55357 \u56470  YES</button>\
+    <button id="noBtn" onclick="no()">\uc0\u55357 \u56904  NO</button>\
+  </div>\
+</div>\
+\
+<!-- YES -->\
+<div class="screen" id="yesScreen">\
+  <h1>\uc0\u55356 \u57225  You made me the happiest person \u10084 \u65039 </h1>\
+  <button onclick="plan()">Plan our date \uc0\u55357 \u56469 </button>\
+</div>\
+\
+<!-- PHOTO REVEAL -->\
+<div class="screen" id="reveal">\
+  <div class="fade"></div>\
+  <img src="your-photo.jpg" id="photo">\
+  <h2>Hopefully this becomes one of our favorite memories \uc0\u10084 \u65039 </h2>\
+</div>\
+\
+<!-- PLANNER -->\
+<div class="screen" id="planner">\
+  <h2>\uc0\u55356 \u57143  Plan our date</h2>\
+\
+  <div id="dates"></div>\
+  <div id="places"></div>\
+  <div id="food"></div>\
+  <div id="time"></div>\
+\
+  <button onclick="send()">Send My Answer \uc0\u10084 \u65039 </button>\
+</div>\
+\
+<!-- FINAL -->\
+<div class="screen" id="final">\
+  <h1>Yay!! \uc0\u10084 \u65039 </h1>\
+  <p id="summary"></p>\
+</div>\
+\
+<script src="script.js"></script>\
+</body>\
+</html>}
