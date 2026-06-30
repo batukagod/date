@@ -1,0 +1,339 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+<meta charset="UTF-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\
+<title>A Little Question \uc0\u10084 \u65039 </title>\
+\
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">\
+\
+<style>\
+\
+*\{\
+margin:0;\
+padding:0;\
+box-sizing:border-box;\
+font-family:Poppins,sans-serif;\
+\}\
+\
+body\{\
+height:100vh;\
+overflow:hidden;\
+background:linear-gradient(135deg,#ffd6e8,#ffeef5,#fff);\
+display:flex;\
+justify-content:center;\
+align-items:center;\
+\}\
+\
+.card\{\
+width:90%;\
+max-width:600px;\
+background:white;\
+padding:40px;\
+border-radius:30px;\
+box-shadow:0 20px 60px rgba(0,0,0,.15);\
+text-align:center;\
+position:relative;\
+z-index:5;\
+\}\
+\
+h1\{\
+font-size:2.2rem;\
+color:#ff4f8b;\
+margin-bottom:15px;\
+\}\
+\
+p\{\
+color:#666;\
+margin-bottom:30px;\
+\}\
+\
+.buttons\{\
+display:flex;\
+justify-content:center;\
+gap:20px;\
+position:relative;\
+height:80px;\
+\}\
+\
+button\{\
+padding:15px 35px;\
+border:none;\
+border-radius:50px;\
+font-size:18px;\
+cursor:pointer;\
+transition:.25s;\
+\}\
+\
+#yes\{\
+background:#ff4f8b;\
+color:white;\
+\}\
+\
+#yes:hover\{\
+transform:scale(1.08);\
+\}\
+\
+#no\{\
+background:#ddd;\
+position:absolute;\
+left:55%;\
+\}\
+\
+.form\{\
+display:none;\
+margin-top:30px;\
+text-align:left;\
+animation:fade .7s;\
+\}\
+\
+.form label\{\
+display:block;\
+margin:15px 0 5px;\
+font-weight:500;\
+\}\
+\
+.form input,.form select\{\
+width:100%;\
+padding:12px;\
+border-radius:12px;\
+border:1px solid #ddd;\
+\}\
+\
+.submit\{\
+margin-top:25px;\
+width:100%;\
+background:#ff4f8b;\
+color:white;\
+\}\
+\
+.hearts\{\
+position:absolute;\
+width:100%;\
+height:100%;\
+overflow:hidden;\
+\}\
+\
+.heart\{\
+position:absolute;\
+color:pink;\
+font-size:25px;\
+animation:float 10s linear infinite;\
+opacity:.6;\
+\}\
+\
+@keyframes float\{\
+0%\{\
+transform:translateY(100vh);\
+opacity:0;\
+\}\
+20%\{opacity:.6;\}\
+100%\{\
+transform:translateY(-120vh);\
+opacity:0;\
+\}\
+\}\
+\
+@keyframes fade\{\
+from\{opacity:0;transform:translateY(20px);\}\
+to\{opacity:1;transform:translateY(0);\}\
+\}\
+\
+.success\{\
+display:none;\
+font-size:28px;\
+color:#ff4f8b;\
+margin-top:25px;\
+animation:fade .8s;\
+\}\
+\
+canvas\{\
+position:fixed;\
+left:0;\
+top:0;\
+pointer-events:none;\
+\}\
+\
+</style>\
+</head>\
+\
+<body>\
+\
+<div class="hearts"></div>\
+\
+<div class="card">\
+\
+<h1>Will you go on a date with me? \uc0\u10084 \u65039 </h1>\
+\
+<p>\
+I promise it'll be fun, full of laughs,\
+good food, and unforgettable memories.\
+\uc0\u55358 \u56697 \
+</p>\
+\
+<div class="buttons">\
+\
+<button id="yes">YES \uc0\u55357 \u56470 </button>\
+\
+<button id="no">No \uc0\u55357 \u56904 </button>\
+\
+</div>\
+\
+<div class="form" id="form">\
+\
+<label>\uc0\u55357 \u56517  Which day would you like?</label>\
+<input type="date">\
+\
+<label>\uc0\u9200  What time?</label>\
+<input type="time">\
+\
+<label>\uc0\u55357 \u56525  Where would you like to go?</label>\
+<input type="text" placeholder="Anywhere you want \uc0\u10084 \u65039 ">\
+\
+<label>\uc0\u55356 \u57180  What should we do?</label>\
+\
+<select>\
+<option>Dinner \uc0\u55356 \u57181 </option>\
+<option>Coffee \uc0\u9749 </option>\
+<option>Movie \uc0\u55356 \u57260 </option>\
+<option>Walk \uc0\u55356 \u57144 </option>\
+<option>Picnic \uc0\u55358 \u56826 </option>\
+<option>Bowling \uc0\u55356 \u57267 </option>\
+<option>Surprise Me \uc0\u10084 \u65039 </option>\
+</select>\
+\
+<button class="submit">I'm Excited! \uc0\u55357 \u56469 </button>\
+\
+</div>\
+\
+<div class="success" id="success">\
+\
+YAYYYYY!! \uc0\u10084 \u65039 \u55358 \u56697 <br><br>\
+\
+I can't wait to see you!!\
+\
+</div>\
+\
+</div>\
+\
+<canvas id="canvas"></canvas>\
+\
+<script>\
+\
+const no=document.getElementById("no");\
+const yes=document.getElementById("yes");\
+const form=document.getElementById("form");\
+const success=document.getElementById("success");\
+\
+function moveButton()\{\
+\
+let x=Math.random()*(window.innerWidth-120);\
+let y=Math.random()*(window.innerHeight-70);\
+\
+no.style.left=x+"px";\
+no.style.top=y+"px";\
+\
+\}\
+\
+no.addEventListener("mouseover",moveButton);\
+no.addEventListener("click",moveButton);\
+\
+yes.onclick=()=>\{\
+document.querySelector(".buttons").style.display="none";\
+form.style.display="block";\
+confetti();\
+\}\
+\
+document.querySelector(".submit").onclick=()=>\{\
+\
+form.style.display="none";\
+success.style.display="block";\
+confetti();\
+\
+\}\
+\
+const hearts=document.querySelector(".hearts");\
+\
+for(let i=0;i<40;i++)\{\
+\
+let h=document.createElement("div");\
+\
+h.className="heart";\
+h.innerHTML="\uc0\u10084 ";\
+\
+h.style.left=Math.random()*100+"%";\
+h.style.animationDuration=(6+Math.random()*8)+"s";\
+h.style.fontSize=(15+Math.random()*20)+"px";\
+h.style.animationDelay=Math.random()*5+"s";\
+\
+hearts.appendChild(h);\
+\
+\}\
+\
+const canvas=document.getElementById("canvas");\
+const ctx=canvas.getContext("2d");\
+\
+canvas.width=window.innerWidth;\
+canvas.height=window.innerHeight;\
+\
+let pieces=[];\
+\
+function confetti()\{\
+\
+for(let i=0;i<180;i++)\{\
+\
+pieces.push(\{\
+\
+x:Math.random()*canvas.width,\
+y:-20,\
+r:Math.random()*8+4,\
+dx:(Math.random()-.5)*6,\
+dy:Math.random()*5+3\
+\
+\})\
+\
+\}\
+\
+\}\
+\
+function animate()\{\
+\
+ctx.clearRect(0,0,canvas.width,canvas.height);\
+\
+pieces.forEach((p,index)=>\{\
+\
+ctx.fillStyle=`hsl($\{Math.random()*360\},100%,60%)`;\
+\
+ctx.beginPath();\
+\
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);\
+\
+ctx.fill();\
+\
+p.x+=p.dx;\
+p.y+=p.dy;\
+\
+if(p.y>canvas.height)\
+pieces.splice(index,1);\
+\
+\})\
+\
+requestAnimationFrame(animate);\
+\
+\}\
+\
+animate();\
+\
+</script>\
+\
+</body>\
+</html>}
